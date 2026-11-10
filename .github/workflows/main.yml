@@ -118,7 +118,7 @@ jobs:
       - name: Create Archives for Release
         run: |
           cd ${{ env.BUILD_DIR }}
-          tar -czf release-${{ github.ref_name }}-${{ matrix.os_name }}.tar.gz release-${{ github.ref_name }}-${{ matrix.os_name }}
+          tar -czf ${{ github.ref_name }}-${{ matrix.os_name }}.tar.gz ${{ github.ref_name }}-${{ matrix.os_name }}
 
       - name: Create GitHub Release and Upload Artifacts
         uses: softprops/action-gh-release@v2
