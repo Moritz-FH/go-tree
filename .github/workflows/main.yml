@@ -123,5 +123,5 @@ jobs:
       - name: Create GitHub Release and Upload Artifacts
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ env.BUILD_DIR }}/release-*.tar.gz
+          files: ${{ env.BUILD_DIR }}/*.tar.gz
           generate_release_notes: true
