@@ -22,3 +22,7 @@ lint:
 # Build the binary
 build:
     @go build -o {{ BUILD_DIR }}/go-tree main.go
+
+# Run the tests
+test:
+    @go test
